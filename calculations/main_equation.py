@@ -137,10 +137,10 @@ class App:
             v0 = float(self.velocity_inp.get())
             h0 = float(self.height_inp.get())
             time = int(self.time_inp.get())
-            g = 1.622
         except ValueError:
             messagebox.showwarning('Ошибка', 'Введены некорректные значения!')
             return
+        g = 1.53
 
         # Инициализация списков изменяющихся величин
         velocity, angle, height = [], [], []
