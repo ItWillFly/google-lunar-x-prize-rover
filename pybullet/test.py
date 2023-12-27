@@ -44,7 +44,7 @@ for j in range(p.getNumJoints(bittle_id)):
 
 def move(tp):
     """
-    Функция для автоматизации движения лунохода вперед
+    Функция для автоматизации движения лунохода
     """
     for joint in range(p.getNumJoints(bittle_id)):
         if joint not in []:
