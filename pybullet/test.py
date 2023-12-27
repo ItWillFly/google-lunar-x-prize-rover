@@ -17,15 +17,19 @@ p.configureDebugVisualizer(p.COV_ENABLE_SHADOWS, 0)
 p.resetDebugVisualizerCamera(2, 75, -30, [0, 0, 0])
 p.setGravity(0, 0, -1.62)  # Лунная гравитация
 
+# Загружаем лунную поверхность
 moon_orientation = p.getQuaternionFromEuler([1.57, 0, 0])
 plane1 = p.loadURDF("lunar_surface.urdf", baseOrientation=moon_orientation)
 
+# Загружаем внешний вид поверхности
 lunar_surface = p.loadTexture("1_Roughness.jpg")
 p.changeVisualShape(plane1, -1, textureUniqueId=lunar_surface)
 
-start_pos = [0, 200, -14] # Начальные координаты лунохода
-bittle_id = p.loadURDF("model2.urdf", start_pos) # Загружаем луноход
+# Устанавливаем начальные координаты и загружаем модель
+start_pos = [0, 200, -14]
+bittle_id = p.loadURDF("model2.urdf", start_pos)
 
+# Загружаем визуализацию солнечной панели
 solar_panel = p.loadTexture("solar_panel.png")
 p.changeVisualShape(bittle_id, 11, textureUniqueId=solar_panel)
 
