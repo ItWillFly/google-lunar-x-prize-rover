@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+
+<robot name="model">
+
+    <material name=''>
+      <color rgba="0.8 0.8 0.8 2"/>
+    </material>
+
+    <material name='dgray'>
+      <color rgba="0.3 0.3 0.3 2"/>
+    </material>
+
+    <material name='white'>
+      <color rgba="1 1 1 2"/>
+    </material>
+
+    <material name='gray'>
+      <color rgba="0.6 0.6 0.6 2"/>
+    </material>
+
+    <material name='blue'>
+      <color rgba="0.113 0.113 0.466 2"/>
+    </material>
+
+    <link name="head_cyll1">
+        <visual>
+          <geometry>
+            <cylinder length="0.15" radius="0.03"/>
+          </geometry>
+          <origin xyz="0 -0.3 0.1"/>
+          <material name='gray'/>
+        </visual>
+        <inertial>
+            <mass value="30"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="head_cyll2">
+        <visual>
+          <geometry>
+            <cylinder length="0.3" radius="0.05"/>
+          </geometry>
+          <origin rpy="0 1.57075 0" xyz="0 -0.3 0.18"/>
+          <material name='gray'/>
+        </visual>
+        <inertial>
+            <mass value="75"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="head_box1">
+        <visual>
+          <geometry>
+            <box size="0.3 0.078 0.1"/>
+          </geometry>
+          <origin xyz="0 -0.33 0.18"/>
+          <material name='gray'/>
+        </visual>
+        <inertial>
+            <mass value="200"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    
+    <link name="body_box">
+        <visual>
+          <geometry>
+            <box size="0.5 0.6 0.1"/>
+          </geometry>
+        </visual>
+        <collision>
+        <geometry>
+            <box size="0.5 0.6 0.1"/>
+          </geometry>
+        </collision>
+        <inertial>
+            <mass value="300"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+      </link>
+    
+    <link name="solar_panel">
+        <visual>
+          <geometry>
+            <box size="0.5 0.5 0.01"/>
+          </geometry>
+          <origin xyz="0 0.05 0.08"/>
+          <material name='white'/>
+        </visual>
+        <collision>
+        <geometry>
+            <box size="0.5 0.6 0.01"/>
+          </geometry>
+        </collision>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+      </link>
+
+    <link name="body_cyll">
+        <visual>
+          <geometry>
+            <cylinder length="0.1" radius="0.25"/>
+          </geometry>
+          <origin xyz="0 -0.3 0"/>
+        </visual>
+        <inertial>
+            <mass value="200"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="rwheelbase">
+        <visual>
+          <geometry>
+            <cylinder length="0.25" radius="0.03"/>
+          </geometry>
+          <origin rpy="0 2 0" xyz="0.2 -0.1 -0.06"/>
+        </visual>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="lwheelbase">
+        <visual>
+          <geometry>
+            <cylinder length="0.25" radius="0.03"/>
+          </geometry>
+          <origin rpy="0 -2 0" xyz="-0.2 -0.1 -0.06"/>
+        </visual>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="lwheelbase_sphere">
+        <visual>
+          <geometry>
+            <sphere radius="0.05"/>
+          </geometry>
+          <origin xyz="-0.3 -0.1 -0.09"/>
+        </visual>
+        <inertial>
+            <mass value="5"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="rwheelbase_sphere">
+        <visual>
+          <geometry>
+            <sphere radius="0.05"/>
+          </geometry>
+          <origin xyz="0.3 -0.1 -0.09"/>
+        </visual>
+        <inertial>
+            <mass value="5"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="left_lwheel_sphere_to_wheel">
+        <visual>
+          <geometry>
+            <sphere radius="0.05"/>
+          </geometry>
+          <origin xyz="-0.3 -0.35 -0.09"/>
+        </visual>
+        <inertial>
+            <mass value="5"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="left_rwheel_sphere_to_wheel">
+        <visual>
+          <geometry>
+            <sphere radius="0.05"/>
+          </geometry>
+          <origin xyz="-0.3 0.15 -0.09"/>
+        </visual>
+        <inertial>
+            <mass value="5"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="right_lwheel_sphere_to_wheel">
+        <visual>
+          <geometry>
+            <sphere radius="0.05"/>
+          </geometry>
+          <origin xyz="0.3 -0.35 -0.09"/>
+        </visual>
+        <inertial>
+            <mass value="5"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="right_rwheel_sphere_to_wheel">
+        <visual>
+          <geometry>
+            <sphere radius="0.05"/>
+          </geometry>
+          <origin xyz="0.3 0.15 -0.09"/>
+        </visual>
+        <inertial>
+            <mass value="5"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="lwheel_cyll">
+        <visual>
+          <geometry>
+            <cylinder length="0.5" radius="0.03"/>
+          </geometry>
+          <origin rpy="1.57075 0 0" xyz="-0.3 -0.1 -0.09"/>
+        </visual>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="rwheel_cyll">
+        <visual>
+          <geometry>
+            <cylinder length="0.5" radius="0.03"/>
+          </geometry>
+          <origin rpy="1.57075 0 0" xyz="0.3 -0.1 -0.09"/>
+        </visual>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="left_lwheel_cyll">
+        <visual>
+          <geometry>
+            <cylinder length="0.2" radius="0.03"/>
+          </geometry>
+          <origin xyz="0 0 -0.1"/>
+        </visual>
+        <collision>
+          <geometry>
+            <cylinder length="0.2" radius="0.03"/>
+          </geometry>
+          <origin xyz="0 0 -0.1"/>
+        </collision>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="right_lwheel_cyll">
+        <visual>
+          <geometry>
+            <cylinder length="0.2" radius="0.03"/>
+          </geometry>
+          <origin xyz="0 0 -0.1"/>
+        </visual>
+        <collision>
+          <geometry>
+              <cylinder length="0.2" radius="0.03"/>
+            </geometry>
+            <origin xyz="0 0 -0.1"/>
+        </collision>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="left_rwheel_cyll">
+        <visual>
+          <geometry>
+            <cylinder length="0.2" radius="0.03"/>
+          </geometry>
+          <origin xyz="0 0 -0.1"/>
+        </visual>
+        <collision>
+          <geometry>
+            <cylinder length="0.2" radius="0.03"/>
+          </geometry>
+          <origin xyz="0 0 -0.1"/>
+        </collision>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="right_rwheel_cyll">
+        <visual>
+          <geometry>
+            <cylinder length="0.1" radius="0.03"/>
+          </geometry>
+          <origin xyz="0 0 -0.1"/>
+        </visual>
+        <collision>
+          <geometry>
+            <cylinder length="0.1" radius="0.03"/>
+          </geometry>
+          <origin xyz="0 0 -0.1"/>
+        </collision>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="rrwheel">
+        <visual>
+          <geometry>
+            <cylinder length="0.1" radius="0.09"/>
+          </geometry>
+          <origin xyz="0 0 0"/>
+          <material name='dgray'/>
+        </visual>
+        <collision>
+          <geometry>
+            <cylinder length="0.1" radius="0.09"/>
+          </geometry>
+          <origin xyz="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="75"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="lrwheel">
+        <visual>
+          <geometry>
+            <cylinder length="0.1" radius="0.09"/>
+          </geometry>
+          <origin xyz="0 0 0"/>
+          <material name='dgray'/>
+        </visual>
+        <collision>
+          <geometry>
+            <cylinder length="0.1" radius="0.09"/>
+          </geometry>
+          <origin xyz="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="75"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="rlwheel">
+        <visual>
+          <geometry>
+            <cylinder length="0.1" radius="0.09"/>
+          </geometry>
+          <origin xyz="0 0 0"/>
+          <material name='dgray'/>
+        </visual>
+        <collision>
+          <geometry>
+            <cylinder length="0.1" radius="0.09"/>
+          </geometry>
+          <origin xyz="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="75"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="rlwheel_sphere">
+        <visual>
+          <geometry>
+            <cylinder length="0.1" radius="0.03"/>
+          </geometry>
+          <origin xyz="0 0 0"/>
+        </visual>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="llwheel">
+        <visual>
+          <geometry>
+            <cylinder length="0.1" radius="0.09"/>
+          </geometry>
+          <origin xyz="0 0 0"/>
+          <material name='dgray'/>
+        </visual>
+        <collision>
+          <geometry>
+            <cylinder length="0.1" radius="0.09"/>
+          </geometry>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="75"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+    <link name="llwheel_sphere">
+        <visual>
+          <geometry>
+            <sphere radius="0.03"/>
+          </geometry>
+          <origin xyz="0 0 0"/>
+        </visual>
+        <inertial>
+            <mass value="10"/>
+              <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+        </inertial>
+    </link>
+
+      <joint name="ll_cyl_to_llwheel_sphere" type="revolute">
+        <axis xyz="0 1 0"/>
+        <limit upper="0" lower="-0.5" velocity="2" effort="1"/>
+        <origin xyz="-0.07 0 -0.2"/>
+        <parent link="left_lwheel_cyll"/>
+        <child link="llwheel_sphere"/>
+      </joint>
+
+      <joint name="llwheel_sphere_to_llwheel" type="revolute">
+        <limit upper="0" lower="1" velocity="2" effort="1"/>
+        <axis xyz="0 0 1"/>
+        <origin rpy="0 1.57075 0"/>
+        <parent link="llwheel_sphere"/>
+        <child link="llwheel"/>
+      </joint>
+
+      <joint name="rl_cyl_to_rlwheel_sphere" type="revolute">
+        <axis xyz="0 1 0"/>
+        <limit upper="0" lower="-0.5" velocity="2" effort="1"/>
+        <origin xyz="-0.07 0 -0.2"/>
+        <parent link="right_lwheel_cyll"/>
+        <child link="rlwheel_sphere"/>
+      </joint>
+
+      <joint name="rlwheel_sphere_to_rlwheel" type="revolute">
+        <limit upper="0" lower="1" velocity="2" effort="1"/>
+        <axis xyz="0 0 1"/>
+        <origin rpy="0 1.57075 0"/>
+        <parent link="rlwheel_sphere"/>
+        <child link="rlwheel"/>
+      </joint>
+
+    <joint name="rr_cyl_to_rrwheel" type="revolute">
+        <limit upper="0" lower="1" velocity="2" effort="1"/>
+        <axis xyz="0 0 1"/>
+        <origin rpy="0 1.57075 0" xyz="0.07 0 -0.2"/>
+        <parent link="right_rwheel_cyll"/>
+        <child link="rrwheel"/>
+      </joint>
+
+    <joint name="lr_cyl_to_lrwheel" type="revolute">
+        <limit upper="0" lower="1" velocity="2" effort="1"/>
+        <axis xyz="0 0 1"/>
+        <origin rpy="0 1.57075 0" xyz="0.07 0 -0.2"/>
+        <parent link="left_rwheel_cyll"/>
+        <child link="lrwheel"/>
+      </joint>
+
+
+    <joint name="left_lwheel_cyll_to_left_lwheel_sphere" type="revolute">
+        <origin rpy="0.8 0 0" xyz="-0.3 0.15 -0.1"/>
+        <limit upper="0.25" lower="-0.25" velocity="2" effort="1"/>
+        <parent link="left_lwheel_sphere_to_wheel"/>
+        <child link="left_lwheel_cyll"/>
+      </joint>
+
+    <joint name="left_lwheel_cyll_to_right_lwheel_sphere" type="revolute">
+        <origin rpy="-0.8 0 0" xyz="-0.3 -0.35 -0.1"/>
+        <limit upper="0.25" lower="-0.25" velocity="2" effort="1"/>
+        <parent link="left_lwheel_sphere_to_wheel"/>
+        <child link="right_lwheel_cyll"/>
+      </joint>
+
+    <joint name="rwheel_cyll_to_left_rwheel_sphere" type="revolute">
+        <origin rpy="0.8 0 0" xyz="0.3 0.15 -0.1"/>
+        <limit upper="0.25" lower="-0.25" velocity="2" effort="1"/>
+        <parent link="left_rwheel_sphere_to_wheel"/>
+        <child link="left_rwheel_cyll"/>
+      </joint>
+
+    <joint name="rwheel_cyll_to_right_rwheel_sphere" type="revolute">
+        <origin rpy="-0.8 0 0" xyz="0.3 -0.35 -0.1"/>
+        <limit upper="0.25" lower="-0.25" velocity="2" effort="1"/>
+        <parent link="right_rwheel_sphere_to_wheel"/>
+        <child link="right_rwheel_cyll"/>
+      </joint>
+
+    <joint name="lwheel_cyll_to_left_lwheel_sphere" type="fixed">
+        <parent link="lwheel_cyll"/>
+        <child link="left_lwheel_sphere_to_wheel"/>
+      </joint>
+
+    <joint name="lwheel_cyll_to_right_lwheel_sphere" type="fixed">
+        <parent link="lwheel_cyll"/>
+        <child link="right_lwheel_sphere_to_wheel"/>
+      </joint>
+
+    <joint name="rwheel_cyll_to_left_lwheel_sphere" type="fixed">
+        <parent link="rwheel_cyll"/>
+        <child link="left_rwheel_sphere_to_wheel"/>
+      </joint>
+
+    <joint name="rwheel_cyll_to_right_lwheel_sphere" type="fixed">
+        <parent link="rwheel_cyll"/>
+        <child link="right_rwheel_sphere_to_wheel"/>
+      </joint>
+
+    <joint name="lwheelbase_to_sphere_joint" type="fixed">
+        <parent link="lwheelbase"/>
+        <child link="lwheelbase_sphere"/>
+      </joint>
+
+    <joint name="rwheelbase_joint_to_rwheel_cyll" type="fixed">
+        <parent link="rwheelbase"/>
+        <child link="rwheel_cyll"/>
+      </joint>
+
+    <joint name="lwheelbase_joint_to_lwheel_cyll" type="fixed">
+        <parent link="lwheelbase"/>
+        <child link="lwheel_cyll"/>
+      </joint>
+
+    <joint name="rwheelbase_to_sphere_joint" type="fixed">
+        <parent link="rwheelbase"/>
+        <child link="rwheelbase_sphere"/>
+      </joint>
+
+    <joint name="lwheelbase_to_body" type="fixed">
+        <parent link="body_box"/>
+        <child link="lwheelbase"/>
+      </joint>
+
+    <joint name="body_to_panel" type="fixed">
+        <parent link="body_box"/>
+        <child link="solar_panel"/>
+      </joint>
+
+    <joint name="rwheelbase_to_body" type="fixed">
+        <parent link="body_box"/>
+        <child link="rwheelbase"/>
+      </joint>
+    
+      <joint name="base_to_head" type="fixed">
+        <parent link="body_box"/>
+        <child link="head_cyll1"/>
+      </joint>
+
+      <joint name="base_to_cyll" type="fixed">
+        <parent link="body_box"/>
+        <child link="body_cyll"/>
+      </joint>
+
+      <joint name="head_to_head" type="fixed">
+        <parent link="head_cyll1"/>
+        <child link="head_cyll2"/>
+      </joint>
+
+      <joint name="head_to_box" type="fixed">
+        <parent link="head_cyll2"/>
+        <child link="head_box1"/>
+      </joint>
+    
+    </robot>
