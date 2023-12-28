@@ -33,7 +33,7 @@
 
 ***РЕЗУЛЬТАТЫ***
 
-- Составлен отчёт о [научно-исследовательской работе](https://drive.google.com/file/d/1KVXpYiBFwLlsqpGRURPy13erwT-iLqOD/view?usp=sharing).
+- Составлен отчёт о [научно-исследовательской работе](https://drive.google.com/file/d/1PwoNhlBfU5G3LuODS3cMaJ4mPd60qW7k/view?usp=sharing).
 - Создан [видеоматериал](https://youtu.be/bfBmrlZduzs) и [презентация](), раскрывающие суть и результаты работы.
 - Составлены программные модули для проведения расчётов (представлены в директории [calculations](/calculations)).
 - Составлены программные модули, обеспечивающие моделирование в среде ```PyBullet``` (представлены в 
