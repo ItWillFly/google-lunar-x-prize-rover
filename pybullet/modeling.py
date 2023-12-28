@@ -27,7 +27,7 @@ p.changeVisualShape(plane1, -1, textureUniqueId=lunar_surface)
 
 # Устанавливаем начальные координаты и загружаем модель
 start_pos = [0, 200, -14]
-bittle_id = p.loadURDF("model2.urdf", start_pos)
+bittle_id = p.loadURDF("model.urdf", start_pos)
 
 # Загружаем визуализацию солнечной панели
 solar_panel = p.loadTexture("solar_panel.png")
